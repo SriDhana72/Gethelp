@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRM Floating Widget</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+
+<div class="crm-widget-wrapper">
+
+    <div class="crm-fab-options" id="crmOptions">
+        
+        <!-- Button 2: Talk to Arivu -->
+        <div class="crm-fab-row row-2">
+            <span class="crm-fab-label">Talk to Arivu</span>
+            <button class="crm-fab-mini" onclick="openOption('Talk to Arivu')">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+            </button>
+        </div>
+
+        <!-- Button 1: Guided Conversations-->
+        <div class="crm-fab-row row-1">
+            <span class="crm-fab-label">Guided Conversations</span>
+            <button class="crm-fab-mini" onclick="openOption('Guided Conversations')">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+            </button>
+        </div>
+
+    </div>
+
+    <button class="crm-fab-main" id="crmMainBtn" onclick="toggleMenu()">
+        <svg class="crm-main-icon icon-chat" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+        <svg class="crm-main-icon icon-close" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+    </button>
+<!-- inside the crm-modal -->
+<div class="crm-modal" id="crmModal">
+    <div class="crm-modal-header">
+        <span class="crm-modal-title" id="crmModalTitle">Chat</span>
+        <button class="crm-modal-close" onclick="closeCrmWindow()">&times;</button>
+    </div>
+    <!-- The iframe will act as the container for BOTH GC (External URL) and Live Chat (Internal Code) -->
+    <iframe class="crm-iframe" id="crmIframe" src=""></iframe>
+</div>
+
+</div>
+<script src="script.js"></script>
+</body>
+</html>
